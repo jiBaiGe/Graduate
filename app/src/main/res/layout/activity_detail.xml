@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e0e0e0"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    >
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center_vertical"
+       android:background="#e0e0e0"
+       android:padding="16dp">
+       <ImageView
+           android:id="@+id/icon1"
+           android:src="@drawable/w100"
+           android:layout_width="50dp"
+           android:layout_height="50dp"
+           />
+
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:orientation="vertical"
+           android:paddingLeft="16dp">
+
+           <TextView
+               android:id="@+id/name1"
+               android:layout_width="wrap_content"
+               android:textSize="26dp"
+               android:textStyle="bold"
+               android:text="www"
+               android:layout_height="wrap_content"/>
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="24dp"
+                   android:text="Tel : "/>
+
+           <TextView
+               android:id="@+id/number1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+             </LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Key : "
+        />
+           <TextView
+               android:id="@+id/key1"
+               android:text="不可见"
+               android:onClick="diskey"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+       </LinearLayout>
+       </LinearLayout>
+
+
+
+   </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#bdbdbd"
+        android:layout_marginLeft="5dp"/>
+
+    <ImageView
+        android:id="@+id/PHONE"
+        android:onClick="call"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/w100"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#e0e0e0"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#bdbdbd"
+        android:layout_margin="10dp"/>
+    <ImageView
+        android:id="@+id/mail"
+        android:onClick="mail"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/w100"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="50dp"
+        android:background="#e0e0e0"/>
+   </LinearLayout>

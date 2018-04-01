@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+white by gibaige ,which is yezhaoyu.
+yezhaoyu1025@gmail.com
+
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a7c0cd"
+    android:orientation="vertical">
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="#EEEEEE"
+        android:padding="16dp"
+        android:hint="  search"
+        />
+        <ImageView
+            android:src="@drawable/w100"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="#EEEEEE"
+            android:onClick="search"/>
+    </LinearLayout>
+<ListView
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="16dp"
+    android:background="#e0e0e0" />
+</LinearLayout>
