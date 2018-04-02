@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Phone extends AppCompatActivity {
+public class Detail extends AppCompatActivity {
 String m ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ String m ;
 
     }
             public void diskey(View view){
-                Toast.makeText(Phone.this,get_key(m),Toast.LENGTH_LONG).show();
+                Toast.makeText(Detail.this,get_key(m),Toast.LENGTH_LONG).show();
             }
 
             public String get_key(String key){

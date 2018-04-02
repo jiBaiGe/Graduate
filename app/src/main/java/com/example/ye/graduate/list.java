@@ -1,47 +1,63 @@
 package com.example.ye.graduate;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Random;
+
 
 public class list extends AppCompatActivity {
     ArrayList<City> cp;
     ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent i1 = getIntent();
         setContentView(R.layout.activity_list);
-
-
         Random random = new Random();
-
         final ArrayList<City> theCity = new ArrayList<City>();
 
             String nowCity = "上海";
-            String nowCond = "晴";
-            String nowTmp = "19°";
             String nowDate = "明天";
-            theCity.add(  new City(nowCity , nowCond , nowTmp , nowDate)  );
-            theCity.add(  new City("北京" , "雨" , "12°" , nowDate)  );
+            String nowTmp = i1.getStringExtra("tmp")+"°";
+            String nowCond = i1.getStringExtra("cond");
+//            String nowTmp = i1.getStringExtra("tmp");
 
+
+
+        listView = (ListView) findViewById(R.id.list);
 
             final CityAdapter Adapter =
                     new CityAdapter(this, theCity);
 
-           listView = (ListView) findViewById(R.id.list);
-
             listView.setAdapter( Adapter );
             listView.setTextFilterEnabled(true);
-        cp =sousuo(theCity);
-
+//            cp =sousuo(theCity);
+            theCity.add(  new City(nowCity , nowCond , nowTmp , nowDate)  );
+            theCity.add(  new City("北京" , "雨" , "12°" , nowDate)  );
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener( ) {
             @Override
@@ -50,7 +66,7 @@ public class list extends AppCompatActivity {
                 String nname =  phone.getName();
                 String nnumber = phone.getCond();
                 String nkey = phone.getTmp();
-                Intent Intent = new Intent(list.this,Phone.class);
+                Intent Intent = new Intent(list.this,Detail.class);
                 Intent.putExtra("clickname",nname);
                 Intent.putExtra("details",nnumber);
                 Intent.putExtra("keyv",nkey);
@@ -59,6 +75,7 @@ public class list extends AppCompatActivity {
         });
 
     }
+
 
     public void search(View view){
         boolean isfind = false;

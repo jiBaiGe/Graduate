@@ -79,19 +79,24 @@
 
     </LinearLayout>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
+        android:background="#bdbdbd"
         android:weightSum="2">
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_margin="2dp"
+            android:background="#e0e0e0"
             android:layout_weight="1">
             <TextView
                 android:id="@+id/date"
                 android:text="明天"
+                android:paddingTop="5dp"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -107,17 +112,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
-                android:padding="10dp"/>
+                android:paddingBottom="5dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:background="#e0e0e0"
             android:layout_weight="1">
             <TextView
 
                 android:text="后天"
                 android:gravity="center"
+                android:paddingTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"/>
@@ -131,13 +141,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
-                android:padding="10dp"/>
+                android:paddingBottom="5dp"/>
         </LinearLayout>
     </LinearLayout>
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#bdbdbd"
+        android:layout_height="8dp"
+        android:background="#8d8d8d"
         android:layout_marginLeft="0dp"/>
 
 </LinearLayout>

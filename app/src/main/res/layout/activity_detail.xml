@@ -43,8 +43,8 @@
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:textSize="24dp"
-                   android:text="Tel : "/>
+                   android:textSize="15dp"
+                   android:text="当前: "/>
 
            <TextView
                android:id="@+id/number1"
@@ -58,7 +58,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Key : "
+        android:text="温度 : "
         />
            <TextView
                android:id="@+id/key1"

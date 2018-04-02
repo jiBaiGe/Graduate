@@ -25,5 +25,10 @@ public class City {
         public String getDate    () { return mDate;     }
         public String getCond    () { return mCond;     }
 
+        public void setName   (String name) {  mName = name;    }
+        public void setTmp (String tmp) {  mTmp = tmp; }
+        public void setDate    (String date) { mDate = date;     }
+        public void setCond    (String cond) { mCond = cond;     }
+
 
 }
